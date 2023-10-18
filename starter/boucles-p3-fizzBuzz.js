@@ -15,7 +15,6 @@ Ecrivez un programme qui affiche tous les nombres entre 1 et 100 avec les except
 
 for (let i=1;i<=100;console.log(i % 15 === 0?"fizzbuzz":i % 3 === 0?"fizz":i % 5 === 0?"buzz":i),i++) {}
 
-
 /*for (let i = 1;i<100;i++) {
     if (i % 15 === 0) {
         console.log("fizzbuzz");
