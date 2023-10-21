@@ -14,6 +14,7 @@
     - étape : on incrémente le compteur pour dire COMMENT ON AVANCE dans la boucle
 */
 
+
 /*
 EXEMPLE 2 : 
 - Complétez ce programme pour qu'il fasse 10 tours de manège
@@ -26,3 +27,14 @@ EXEMPLE 2 :
   - C'est le tour numéro 10
   - Le manège s'arrête
 */
+
+for (let i = 1,j="le manège demarre",k="C'est le tour";i<=10;i++) {
+    if (i === 1) {
+        console.log(j)
+    } else {
+        console.log(k, i)
+    }
+    if (i === 10) {
+        console.log(j)
+    }
+}
