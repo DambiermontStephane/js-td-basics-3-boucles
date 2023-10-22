@@ -21,8 +21,18 @@ Structure de contôle itérative
 
 
 
-let j = 1;
+
+for (let i= 3;i > 0;i--) {
+    console.log(i)
+}
+
+console.log("partez !")
+
+
+
+
+/*let j = 1;
 
 for (let i = 10, j=1;i>0;i--,j++) {
     console.log(i, j);
-}
+}*/

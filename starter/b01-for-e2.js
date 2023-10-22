@@ -28,13 +28,10 @@ EXEMPLE 2 :
   - Le manège s'arrête
 */
 
-for (let i = 1,j="le manège demarre",k="C'est le tour";i<=10;i++) {
-    if (i === 1) {
-        console.log(j)
-    } else {
-        console.log(k, i)
-    }
-    if (i === 10) {
-        console.log(j)
-    }
+console.log("Le manège démarre !")
+
+for (let i =  1;i <= 10;i++) {
+    console.log(`C'est le tour numéro ${i}`)
 }
+
+console.log("Le manège s'arrête.")

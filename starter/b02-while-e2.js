@@ -24,3 +24,13 @@ EXEMPLE 2 :
   - Le manège s'arrête
 */
 
+let i= 0;
+
+console.log("Le manège démarre !")
+
+while (i < 10) {
+    i++
+    console.log(`C'est le tour numéro ${i}`)
+}
+
+console.log("Le manège s'arrête.")
