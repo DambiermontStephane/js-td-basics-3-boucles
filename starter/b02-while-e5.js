@@ -42,7 +42,7 @@ let i;
 let list = [];
 
 while (true) {
-    i = prompt("Tapez une lettre ou X pour sortir : ")
+    i = prompt("Tapez une lettre ou \"X\" pour sortir : ")
     if (i !== "X") {
         list.push(i)
         i;
