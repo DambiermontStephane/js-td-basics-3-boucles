@@ -22,3 +22,19 @@ CORRECTION :
 - Incrémentez 'nombre' à chaque itération pour éviter une boucle infinie.
 
 */
+
+/*let nombre = 1;
+
+while (true){
+    if (nombre <= 5) {
+        nombre++;
+        console.log(nombre);
+    }
+}*/
+
+let i = 0;
+
+while (i < 5) {
+    i++
+    console.log(i)
+}
