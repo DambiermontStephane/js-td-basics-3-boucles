@@ -20,19 +20,50 @@ Ecrivez un programme qui va deviner le nombre auquel vous avez pensé (voir livr
 */
 // Écrivez le code JavaScript pour résoudre cet exercice en essayant de deviner le nombre auquel l'utilisateur pense.
 
-const randomNb = parseInt(prompt("Entrez un chiffre entre 1 et 10:"));
-let i = 1;
+/*const randomNumber = Math.floor(Math.random() * 10) + 1;
+let userNumber;
 
-function randomNumber(nombre) {
-    return Math.floor(Math.random() * nombre);
-}
+while (true) {
+    console.log(randomNumber)
+    userNumber = parseInt(prompt("Entrez le nombre à deviner :"));
 
-while (randomNb) {
-    if (randomNumber(10) < randomNb) {
-        i++;
-        console.log(`Ce n'est pas ${i}`);
-    } else if (i === randomNb){
-        console.log(`C'est ${i}`);
+    if (isNaN(userNumber)) {
+        console.log("C'est pas un nombre.");
+    } else if (randomNumber < userNumber) {
+        console.log("C'est plus petit");
+    } else if (randomNumber > userNumber) {
+        console.log("C'est plus grand");
+    } else {
+        console.log("Bravo");
         break;
+    }
+}*/
+
+let min = 1;
+let max = 10;
+const userNumber = parseInt(prompt(`Entrez un nombre entre [${min} ; ${max}]:`));
+let guessedNumber = max / 2;
+
+while (true) {
+    debugger;
+    console.log(guessedNumber);
+    if (isNaN(userNumber)) {
+        console.log("Ce n’est pas un nombre.");
+        break;
+    }
+    if (userNumber > max || userNumber < min) {
+        console.log(`Ce n’est pas entre [${min} ; ${max}].`);
+        break;
+    }
+    if (userNumber === guessedNumber) {
+        console.log(`J’ai trouvé ${guessedNumber}.`);
+        break;
+    }
+    if (userNumber > guessedNumber) {
+        min = guessedNumber + 1;
+        guessedNumber = Math.ceil((max + min) / 2);
+    } else {
+        max = guessedNumber - 1;
+        guessedNumber = Math.floor((max + min) / 2);
     }
 }
