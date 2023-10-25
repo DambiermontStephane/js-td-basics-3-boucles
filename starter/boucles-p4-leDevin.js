@@ -44,6 +44,7 @@ let max = 10;
 const userNumber = parseInt(prompt(`Entrez un nombre entre [${min} ; ${max}]:`));
 let guessedNumber = max / 2;
 
+
 while (true) {
     debugger;
     console.log(guessedNumber);
