@@ -39,31 +39,34 @@ while (true) {
     }
 }*/
 
-let min = 1;
-let max = 10;
-const userNumber = parseInt(prompt(`Entrez un nombre entre [${min} ; ${max}]:`));
-let guessedNumber = max / 2;
 
-while (true) {
-    debugger;
-    console.log(guessedNumber);
-    if (isNaN(userNumber)) {
-        console.log("Ce n’est pas un nombre.");
-        break;
-    }
-    if (userNumber > max || userNumber < min) {
-        console.log(`Ce n’est pas entre [${min} ; ${max}].`);
-        break;
-    }
-    if (userNumber === guessedNumber) {
-        console.log(`J’ai trouvé ${guessedNumber}.`);
-        break;
-    }
-    if (userNumber > guessedNumber) {
-        min = guessedNumber + 1;
-        guessedNumber = Math.ceil((max + min) / 2);
-    } else {
-        max = guessedNumber - 1;
-        guessedNumber = Math.floor((max + min) / 2);
+
+function devine(min, max) {
+    const userNumber = parseInt(prompt(`Entrez un nombre entre [${min} ; ${max}]:`));
+    let guessedNumber = max / 2;
+
+    while (true) {
+        console.log(guessedNumber);
+        if (isNaN(userNumber)) {
+            console.log("Ce n’est pas un nombre.");
+            return;
+        }
+        if (userNumber > max || userNumber < min) {
+            console.log(`Ce n’est pas entre [${min} ; ${max}].`);
+            return;
+        }
+        if (userNumber === guessedNumber) {
+            console.log(`J’ai trouvé ${guessedNumber}.`);
+            return;
+        }
+        if (userNumber > guessedNumber) {
+            min = guessedNumber + 1;
+            guessedNumber = Math.ceil((max + min) / 2);
+        } else {
+            max = guessedNumber - 1;
+            guessedNumber = Math.floor((max + min) / 2);
+        }
     }
 }
+
+devine(1, 100000);
